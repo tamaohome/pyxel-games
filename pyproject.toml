@@ -1,0 +1,37 @@
+[project]
+name = "pyxel-games"
+version = "0.1.0"
+description = "Python pyxel で制作したミニゲーム集"
+authors = [
+    { name = "tamaohome", email = "85826245+tamaohome@users.noreply.github.com" }
+]
+dependencies = [
+    "pyxel>=2.3.18",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytest>=8.4.0",
+    "commitizen>=4.8.3",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["games"]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver"
+version = "0.0.1"
+update_changelog_on_bump = true
+major_version_zero = true
