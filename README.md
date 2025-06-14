@@ -6,6 +6,9 @@
 
 [![ball_game](https://github.com/tamaohome/pyxel-games/blob/main/games/ball_game/ball_game.png?raw=true)](https://tamaohome.github.io/pyxel-games/games/ball_game/ball_game.html)
 
+- ソースコード
+  - https://github.com/tamaohome/pyxel-games/blob/main/games/ball_game/main.py
+
 ---
 
 ## pyxelによるブラウザゲーム作成手順
@@ -51,3 +54,18 @@ pyxel package . main.py
 ```sh
 pyxel app2html ball_game.pyxapp
 ```
+
+スマートフォン上で閲覧すると表示されるゲームパッドを無効にする場合は、生成された HTML ファイルを以下の通り修正する。
+
+```diff
+- launchPyxel({ command: "play", name: "ball_game.pyxapp", gamepad: "enabled", ...
++ launchPyxel({ command: "play", name: "ball_game.pyxapp", gamepad: "disabled", ...
+```
+
+---
+
+参考URL
+
+https://github.com/kitao/pyxel/blob/main/docs/README.ja.md
+
+https://github.com/kitao/pyxel/blob/main/docs/pyxel-web-ja.md
