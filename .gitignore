@@ -23,5 +23,9 @@ VENV/
 *.venv
 .pytest_cache/
 
+# rye
+requirements.lock
+requirements-dev.lock
+
 # OS
 .DS_Store
